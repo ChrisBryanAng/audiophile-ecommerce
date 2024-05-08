@@ -2,7 +2,7 @@ import HeaderImage from "/assets/home/mobile/image-header.jpg";
 
 const Header = () => {
 	return (
-		<div className="h-[75%]">
+		<div className="relative h-[700px] mb-6">
 			<div className="relative z-10 h-full flex flex-col justify-center items-center">
 				<p className="w-full mt-24 mb-4 text-gray1 text-sm uppercase tracking-[0.8em] text-center">
 					NEW PRODUCT
@@ -22,14 +22,13 @@ const Header = () => {
 						See Product
 					</button>
 				</div>
-
-				<div className="absolute top-0 h-max w-full -z-50">
-					<img
-						alt="image-header"
-						src={HeaderImage}
-						className="h-full w-full object-cover block"
-					/>
-				</div>
+			</div>
+			<div className="absolute inset-0 h-full w-full -z-50">
+				<img
+					alt="image-header"
+					src={HeaderImage}
+					className="h-full w-full object-cover block"
+				/>
 			</div>
 		</div>
 	);
