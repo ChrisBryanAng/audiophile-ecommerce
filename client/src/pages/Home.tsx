@@ -1,4 +1,4 @@
-import { Header, HomeCategory } from "../components";
+import { Header, HomeCategory, HomeZx9Speaker } from "../components";
 
 import HeadphoneImage from "/assets/image-removebg-category-headphones.png";
 import SpeakerImage from "/assets/image-removebg-category-speakers.png";
@@ -20,6 +20,9 @@ const Home = () => {
 					image={EarphoneImage}
 					link="/earphones"
 				/>
+			</div>
+			<div className="px-8 mt-28">
+				<HomeZx9Speaker />
 			</div>
 		</div>
 	);
