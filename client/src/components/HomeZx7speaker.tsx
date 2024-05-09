@@ -4,7 +4,7 @@ import Zx7SpeakerImageMobile from "/assets/home/mobile/image-speaker-zx7.jpg";
 
 const HomeZx7speaker = () => {
 	return (
-		<div className="relative rounded-xl overflow-clip">
+		<div className="relative rounded-lg overflow-clip">
 			<div className="absolute inset-0 pl-6 flex flex-col justify-center space-y-8">
 				<p className="uppercase text-black1 font-bold text-3xl w-max tracking-wider">
 					Zx7 Speaker

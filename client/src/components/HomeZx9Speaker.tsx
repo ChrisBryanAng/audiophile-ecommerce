@@ -6,7 +6,7 @@ import CirclePattern from "/assets/home/desktop/pattern-circles.svg";
 
 const HomeZx9Speaker = () => {
 	return (
-		<div className="relative flex flex-col bg-primary-1 rounded-xl justify-between items-center pt-6 pb-20 space-y-9">
+		<div className="relative flex flex-col bg-primary-1 rounded-lg justify-between items-center pt-6 pb-20 space-y-9">
 			{/* <div className="absolute flex left-[3.5px] top-1 border-[1px] inset-0 border-white/50 rounded-full h-[50%] w-[98%]">
 				<div className="absolute top-[28px] left-[26px] border-[1px] border-white/50 rounded-full h-[85%] w-[85%]" />
 			</div> */}

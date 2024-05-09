@@ -3,6 +3,9 @@ import {
 	HomeCategory,
 	HomeZx9Speaker,
 	HomeZx7Speaker,
+	HomeYx1Earphone,
+	HomeBestGear,
+	HomeFooter,
 } from "../components";
 
 import HeadphoneImage from "/assets/image-removebg-category-headphones.png";
@@ -29,9 +32,16 @@ const Home = () => {
 			<div className="px-8 mt-28">
 				<HomeZx9Speaker />
 			</div>
-			<div className="px-8 mt-8">
+			<div className="px-8 mt-6">
 				<HomeZx7Speaker />
 			</div>
+			<div className="px-8 mt-6">
+				<HomeYx1Earphone />
+			</div>
+			<div className="px-8 mt-36">
+				<HomeBestGear />
+			</div>
+			<HomeFooter />
 		</div>
 	);
 };

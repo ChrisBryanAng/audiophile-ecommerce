@@ -3,3 +3,7 @@ export { default as Header } from "./Header";
 export { default as HomeCategory } from "./HomeCategory";
 export { default as HomeZx9Speaker } from "./HomeZx9Speaker";
 export { default as HomeZx7Speaker } from "./HomeZx7speaker";
+export { default as HomeYx1Earphone } from "./HomeYx1Earphone";
+export { default as HomeBestGear } from "./HomeBestGear";
+export { default as HomeFooter } from "./HomeFooter";
+export { default as HomeFooterLink } from "./HomeFooterLinks";
