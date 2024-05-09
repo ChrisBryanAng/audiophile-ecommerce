@@ -4,7 +4,7 @@ const Header = () => {
 	return (
 		<div className="relative h-[700px] mb-6">
 			<div className="relative z-10 h-full flex flex-col justify-center items-center">
-				<p className="w-full mt-24 mb-4 text-gray1 text-sm uppercase tracking-[0.8em] text-center">
+				<p className="w-full mt-24 mb-4 text-gray1 font-thin text-sm uppercase tracking-[0.8em] text-center">
 					NEW PRODUCT
 				</p>
 				<p className="uppercase mb-8 text-white text-4xl tracking-wider font-bold text-center ">
