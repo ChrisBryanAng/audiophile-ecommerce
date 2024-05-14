@@ -8,7 +8,7 @@ type TFooterLink = {
 const HomeFooterLinks = ({ label, link }: TFooterLink) => {
 	return (
 		<>
-			<Link to={link} className="uppercase tracking-[0.2em] text-white">
+			<Link to={link} className="uppercase tracking-[0.2em] text-white hover:text-primary-1">
 				{label}
 			</Link>
 		</>
