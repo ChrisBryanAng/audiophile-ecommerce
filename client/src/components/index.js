@@ -6,4 +6,4 @@ export { default as HomeZx7Speaker } from "./HomeZx7speaker";
 export { default as HomeYx1Earphone } from "./HomeYx1Earphone";
 export { default as HomeBestGear } from "./HomeBestGear";
 export { default as HomeFooter } from "./HomeFooter";
-export { default as HomeFooterLink } from "./HomeFooterLinks";
+export { default as HomeNavigationLink } from "./HomeNavigationLink";

@@ -1,34 +1,53 @@
 import { Link } from "react-router-dom";
 
-import SpeakerImage from "/assets/home/mobile/image-speaker-zx9.png";
+import SpeakerImageMobile from "/assets/home/mobile/image-speaker-zx9.png";
+import SpeakerImageTablet from "/assets/home/tablet/image-speaker-zx9.png";
+import SpeakerImageDesktop from "/assets/home/desktop/image-speaker-zx9.png";
 import CirclePattern from "/assets/home/desktop/pattern-circles.svg";
 
 const HomeZx9Speaker = () => {
   return (
-    <div className="relative isolate flex flex-col bg-primary-1 rounded-lg justify-between items-center pt-6 pb-20 space-y-9 overflow-hidden">
-      <div className="absolute inset-0 md:-top-80 -z-10">
-        <img src={CirclePattern} className="scale-[1.7] md:scale-110" />
+    <div className="relative isolate h-full lg:w-[1370px] flex flex-col lg:flex-row lg:gap-6 bg-primary-1 rounded-lg justify-between lg:justify-center items-center pt-6 lg:pt-20 pb-20 lg:pb-0 space-y-9 lg:space-y-0 overflow-hidden">
+      <div className="relative lg:w-[50%]">
+        <div className="absolute inset-0 top-14 md:top-0 lg:-top-8 -z-10">
+          <img
+            src={CirclePattern}
+            className="scale-[3.3] md:scale-[4.5] lg:scale-125"
+          />
+        </div>
+        <div className="flex h-48 md:h-56 lg:h-[400px] w-44 md:w-52 lg:w-full">
+          <img
+            alt="zx9-speaker"
+            src={SpeakerImageDesktop}
+            className="h-full w-full object-contain block"
+          />
+          {/* <img
+            alt="zx9-speaker"
+            src={SpeakerImageTablet}
+            className="h-full w-full object-contain sm:hidden md:block lg:hidden"
+          />
+          <img
+            alt="zx9-speaker"
+            src={SpeakerImageDesktop}
+            className="relative top-3 h-full w-full object-contain sm:hidden md:hidden lg:block"
+          /> */}
+        </div>
       </div>
-      <div className="h-56 w-52">
-        <img
-          alt="zx9-speaker"
-          src={SpeakerImage}
-          className="h-full w-full object-contain block"
-        />
+      <div className="flex flex-col w-full lg:w-[50%] h-full space-y-6 md:space-y-7 lg:space-y-8">
+        <p className="uppercase pb-0 pt-4 md:pt-10 lg:pt-4 text-center lg:text-start text-white text-4xl md:text-5xl font-bold tracking-wider">
+          Zx9 <br /> speaker
+        </p>
+        <p className="text-center self-center lg:text-start font-thin w-[90%] md:w-[40%] lg:w-[60%] text-white/80 tracking-wider">
+          Upgrade to premium speakers that are phenomenally built to deliver
+          truly remarkable sound.
+        </p>
+        <Link
+          to="/products/zx9-speaker"
+          className="relative z-10 bg-black1 self-center w-max hover:bg-hover-button py-4 px-8 text-sm text-white uppercase tracking-wider"
+        >
+          see product
+        </Link>
       </div>
-      <p className="uppercase pb-2 md:pb-0 pt-4 md:pt-10 text-center text-white text-4xl md:text-5xl font-bold tracking-wider">
-        Zx9 <br /> speaker
-      </p>
-      <p className="text-center font-thin w-[80%] md:w-[40%] text-white/80 tracking-wider capitalize">
-        upgrade to premium speakers that are phenomenally built to deliver truly
-        remarkable sound.
-      </p>
-      <Link
-        to="/products/zx9-speaker"
-        className="relative z-10 bg-black1 hover:bg-white py-4 px-8 text-sm text-white hover:text-black1 uppercase tracking-wider"
-      >
-        see product
-      </Link>
     </div>
   );
 };

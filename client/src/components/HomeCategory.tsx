@@ -9,9 +9,9 @@ type TCategory = {
 
 const HomeCategory = ({ label, image, link }: TCategory) => {
   return (
-    <div className="relative isolate flex flex-col w-full pb-6 space-y-6 justify-center items-center rounded-lg">
-      <div className="absolute bg-gray1 -z-50 inset-0 flex self-end h-[67%] rounded-xl" />
-      <div className="relative h-32 w-24">
+    <div className="relative isolate flex flex-col w-full lg:w-[400px] pb-6 space-y-6 justify-center items-center rounded-lg">
+      <div className="absolute bg-gray1 -z-50 inset-0 flex self-end h-[67%] w-full rounded-xl" />
+      <div className="relative h-32 lg:h-36 w-24 lg:w-28">
         <img
           alt="image-category"
           src={image}

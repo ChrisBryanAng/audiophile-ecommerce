@@ -14,9 +14,9 @@ import EarphoneImage from "/assets/image-removebg-category-earphones.png";
 
 const Home = () => {
   return (
-    <div className="relative h-full">
+    <div className="relative h-full w-full flex flex-col items-center">
       <Header />
-      <div className="flex flex-col md:mt-24 md:flex-row md:justify-between md:gap-3 w-full px-8">
+      <div className="flex flex-col md:mt-24 md:flex-row md:justify-between md:gap-3 lg:gap-8 px-8 md:px-[68px] lg:px-0 w-full lg:w-[1370px]">
         <HomeCategory
           label="Headphones"
           image={HeadphoneImage}
