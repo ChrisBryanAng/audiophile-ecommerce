@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 
-import SpeakerImageMobile from "/assets/home/mobile/image-speaker-zx9.png";
-import SpeakerImageTablet from "/assets/home/tablet/image-speaker-zx9.png";
 import SpeakerImageDesktop from "/assets/home/desktop/image-speaker-zx9.png";
 import CirclePattern from "/assets/home/desktop/pattern-circles.svg";
 
 const HomeZx9Speaker = () => {
   return (
     <div className="relative isolate h-full lg:w-[1370px] flex flex-col lg:flex-row lg:gap-6 bg-primary-1 rounded-lg justify-between lg:justify-center items-center pt-6 lg:pt-20 pb-20 lg:pb-0 space-y-9 lg:space-y-0 overflow-hidden">
-      <div className="relative lg:w-[50%]">
+      <div className="relative lg:w-[50%] pt-10 md:pt-0">
         <div className="absolute inset-0 top-14 md:top-0 lg:-top-8 -z-10">
           <img
             src={CirclePattern}
@@ -21,16 +19,6 @@ const HomeZx9Speaker = () => {
             src={SpeakerImageDesktop}
             className="h-full w-full object-contain block"
           />
-          {/* <img
-            alt="zx9-speaker"
-            src={SpeakerImageTablet}
-            className="h-full w-full object-contain sm:hidden md:block lg:hidden"
-          />
-          <img
-            alt="zx9-speaker"
-            src={SpeakerImageDesktop}
-            className="relative top-3 h-full w-full object-contain sm:hidden md:hidden lg:block"
-          /> */}
         </div>
       </div>
       <div className="flex flex-col w-full lg:w-[50%] h-full space-y-6 md:space-y-7 lg:space-y-8">

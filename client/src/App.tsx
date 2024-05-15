@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Home } from "./pages";
+import { Home, Headphones, NotFound } from "./pages";
 import { Navbar } from "./components";
 
 const App = () => {
@@ -11,6 +11,9 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/headphones" element={<Headphones />} />
+
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
