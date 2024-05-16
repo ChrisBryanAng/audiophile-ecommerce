@@ -6,7 +6,7 @@ import { navLinks } from "../utils/helpers";
 
 const Navbar = () => {
   return (
-    <div className="fixed z-50 w-full lg:w-[80%] flex justify-between items-center p-6 md:p-8 lg:p-0 lg:py-8 text-white border-b-[1px] border-b-solid border-b-gray-600 bg-transparent">
+    <div className="fixed z-50 w-full lg:w-[80%] flex justify-between items-center p-6 md:p-8 lg:p-0 lg:py-8 text-white lg:border-b-[1px] lg:border-b-solid lg:border-b-gray-700 bg-transparent">
       <div className="lg:hidden flex justify-center items-center">
         <GiHamburgerMenu className="h-6 md:h-7 w-6 md:w-7" />
       </div>

@@ -6,7 +6,7 @@ import EarphoneImage from "/assets/image-removebg-category-earphones.png";
 
 const HomeCategory = () => {
   return (
-    <>
+    <div className="flex flex-col md:mt-24 md:flex-row md:justify-between md:gap-3 lg:px-0 w-full lg:w-[80%]">
       <HomeCategoryCard
         label="Headphones"
         image={HeadphoneImage}
@@ -22,7 +22,7 @@ const HomeCategory = () => {
         image={EarphoneImage}
         link="/earphones"
       />
-    </>
+    </div>
   );
 };
 

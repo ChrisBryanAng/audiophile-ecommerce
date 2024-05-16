@@ -5,32 +5,45 @@ type THeadphone = {
   isNew: boolean;
   description: string;
   image: string;
+  idx: number;
 };
 
-const HeadphoneCard = ({ label, isNew, description, image }: THeadphone) => {
+const HeadphoneCard = ({
+  label,
+  isNew,
+  description,
+  image,
+  idx,
+}: THeadphone) => {
   return (
-    <div className="flex flex-col justify-center items-center space-y-8">
-      <div className="rounded-lg overflow-clip bg-gray1">
-        <img src={image} className="h-full w-full block object-contain" />
+    <div
+      className={`flex flex-col ${
+        idx % 2 ? "lg:flex-row-reverse" : "lg:flex-row"
+      } lg:gap-28 justify-center items-center space-y-8`}
+    >
+      <div className="rounded-lg overflow-clip bg-gray1 md:h-[400px] md:w-full lg:h-full">
+        <img src={image} className="h-full w-full block object-cover" />
       </div>
-      {isNew && (
-        <p className="w-full text-primary-1 tracking-[0.8em] uppercase font-thin text-sm text-center">
-          New product
+      <div className="flex flex-col justify-center items-center lg:items-start space-y-8">
+        {isNew && (
+          <p className="w-full text-primary-1 tracking-[0.8em] uppercase font-thin text-sm text-center lg:text-start">
+            New product
+          </p>
+        )}
+        <p className="w-[80%] md:w-[60%] text-3xl md:text-4xl uppercase text-center lg:text-start font-semibold tracking-wider">
+          {label}
         </p>
-      )}
-      <p className="w-[80%] text-3xl uppercase text-center font-semibold tracking-wider">
-        {label}
-      </p>
-      <p className="text-sm font-thin text-black/80 text-center tracking-wider">
-        {description}
-      </p>
+        <p className="md:w-[70%] lg:w-[72%] text-sm font-thin text-black/80 text-center lg:text-start tracking-wider">
+          {description}
+        </p>
 
-      <Link
-        to=""
-        className="w-max px-8 py-4 bg-primary-1 text-white uppercase hover:text-primary-2 text-center tracking-wider text-sm"
-      >
-        see product
-      </Link>
+        <Link
+          to=""
+          className="w-max px-8 py-4 bg-primary-1 text-white uppercase hover:bg-primary-2 text-center tracking-wider text-sm"
+        >
+          see product
+        </Link>
+      </div>
     </div>
   );
 };
