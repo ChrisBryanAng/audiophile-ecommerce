@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Home, Headphones, NotFound } from "./pages";
+import { Home, Headphones, Speakers, Earphones, NotFound } from "./pages";
 import { Navbar } from "./components";
 
 const App = () => {
@@ -12,6 +12,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/headphones" element={<Headphones />} />
+        <Route path="/speakers" element={<Speakers />} />
+        <Route path="/earphones" element={<Earphones />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

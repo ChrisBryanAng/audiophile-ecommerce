@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-type THeadphone = {
+type TProduct = {
   label: string;
   isNew: boolean;
   description: string;
@@ -8,13 +8,7 @@ type THeadphone = {
   idx: number;
 };
 
-const HeadphoneCard = ({
-  label,
-  isNew,
-  description,
-  image,
-  idx,
-}: THeadphone) => {
+const ProductCard = ({ label, isNew, description, image, idx }: TProduct) => {
   return (
     <div
       className={`flex flex-col ${
@@ -48,4 +42,4 @@ const HeadphoneCard = ({
   );
 };
 
-export default HeadphoneCard;
+export default ProductCard;

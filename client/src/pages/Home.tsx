@@ -23,7 +23,7 @@ const Home = () => {
       <div className="px-8 mt-6">
         <HomeYx1Earphone />
       </div>
-      <div className="px-8 mt-36">
+      <div className="px-8 md:px-[68px] mt-36">
         <HomeBestGear />
       </div>
       <HomeFooter />

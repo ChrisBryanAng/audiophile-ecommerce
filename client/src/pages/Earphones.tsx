@@ -6,23 +6,23 @@ import {
 } from "../components";
 import data from "../utils/data.json";
 
-const Headphones = () => {
+const Earphones = () => {
   return (
     <div className="h-full w-full flex flex-col">
       <p className="flex flex-shrink-0 uppercase text-white font-bold tracking-widest text-3xl md:text-4xl pb-8 md:pb-28 justify-center items-end bg-black1 h-[200px] md:h-[350px] lg:h-[400px] w-full">
-        Headphones
+        Earphones
       </p>
       <div className="flex flex-col gap-28 h-max w-full lg:w-[80%] self-center mt-24 px-8 lg:px-0">
         {data
-          ?.filter((hp) => hp.category === "headphones")
+          ?.filter((ep) => ep.category === "earphones")
           .reverse()
-          .map((hps, idx) => (
-            <div key={hps.id}>
+          .map((eps, idx) => (
+            <div key={eps.id}>
               <ProductCard
-                label={hps.name}
-                isNew={hps.new}
-                description={hps.description}
-                image={hps.image.desktop}
+                label={eps.name}
+                isNew={eps.new}
+                description={eps.description}
+                image={eps.image.desktop}
                 idx={idx}
               />
             </div>
@@ -39,4 +39,4 @@ const Headphones = () => {
   );
 };
 
-export default Headphones;
+export default Earphones;
