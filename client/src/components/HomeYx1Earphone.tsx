@@ -9,7 +9,7 @@ const HomeYx1Earphone = () => {
           Yx1 Earphones
         </p>
         <Link
-          to="/product/zx7-speaker"
+          to="/products/yx1-earphones"
           className="uppercase text-black1 hover:text-white md:ml-10 lg:ml-24 font-bold bg-transparent hover:bg-black1 border-2 border-solid w-max border-black1 py-3 md:py-4 text-sm px-10"
         >
           See Product

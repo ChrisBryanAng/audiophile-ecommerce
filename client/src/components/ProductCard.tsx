@@ -5,10 +5,20 @@ type TProduct = {
   isNew: boolean;
   description: string;
   image: string;
+  slug: string;
+  category: string;
   idx: number;
 };
 
-const ProductCard = ({ label, isNew, description, image, idx }: TProduct) => {
+const ProductCard = ({
+  label,
+  isNew,
+  description,
+  image,
+  slug,
+  category,
+  idx,
+}: TProduct) => {
   return (
     <div
       className={`flex flex-col ${
@@ -32,7 +42,7 @@ const ProductCard = ({ label, isNew, description, image, idx }: TProduct) => {
         </p>
 
         <Link
-          to=""
+          to={`/${category}/${slug}`}
           className="w-max px-8 py-4 bg-primary-1 text-white uppercase hover:bg-primary-2 text-center tracking-wider text-sm"
         >
           see product
