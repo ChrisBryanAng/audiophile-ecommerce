@@ -17,16 +17,16 @@ const ProductPreview = () => {
   };
 
   return (
-    <div className="flex flex-col h-full w-full lg:w-[80%] gap-24">
+    <div className="flex flex-col h-full w-full lg:w-[80%] gap-24 lg:gap-32">
       <button
         onClick={handlePreviousPage}
-        className="capitalize hover:underline text-start -mb-16 text-black1/80 hover:text-primary-1"
+        className="capitalize hover:underline text-start -mb-16 lg:-mb-14 lg:mt-10 text-black1/80 hover:text-primary-1"
       >
         Go back
       </button>
 
-      <div className="flex flex-col md:flex-row gap-8 md:gap-20">
-        <div className="h-[350px] md:h-[480px] w-full md:w-[500px] bg-gray1 rounded-lg overflow-clip">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-20 lg:gap-32">
+        <div className="h-[350px] md:h-[480px] lg:h-[600px] w-full md:w-[500px] lg:w-[1400px] bg-gray1 rounded-lg overflow-clip">
           <img
             src={filteredProduct?.image.desktop}
             alt="zx9-speaker"
@@ -40,10 +40,10 @@ const ProductPreview = () => {
               New Product
             </p>
           )}
-          <p className="uppercase font-bold text-3xl tracking-widest">
+          <p className="uppercase font-bold text-3xl lg:text-4xl tracking-widest lg:w-[50%]">
             {filteredProduct?.name}
           </p>
-          <p className="text-black1/80 font-thin tracking-wider leading-relaxed">
+          <p className="text-black1/80 font-thin tracking-wider leading-relaxed lg:w-[85%]">
             {filteredProduct?.description}
           </p>
           <p className="font-semibold text-lg tracking-widest">
@@ -51,13 +51,19 @@ const ProductPreview = () => {
           </p>
           <div className="flex gap-4">
             <div className="flex bg-gray1">
-              <button type="button" className="w-10 text-black1 text-center">
+              <button
+                type="button"
+                className="w-10 text-black1 text-center hover:text-primary-1"
+              >
                 -
               </button>
               <p className="w-10 text-black1 items-center flex justify-center">
                 1
               </p>
-              <button type="button" className="w-10 text-black1 text-center">
+              <button
+                type="button"
+                className="w-10 text-black1 text-center hover:text-primary-1"
+              >
                 +
               </button>
             </div>
@@ -76,36 +82,38 @@ const ProductPreview = () => {
         </div>
       </div>
 
-      {/** Features */}
-      <div className="flex flex-col gap-6">
-        <p className="font-bold text-2xl md:text-3xl tracking-wider uppercase">
-          Features
-        </p>
-        <p className="font-thin tracking-wider leading-relaxed whitespace-pre-line">
-          {filteredProduct?.features}
-        </p>
-      </div>
+      <div className="flex flex-col lg:flex-row gap-36">
+        {/** Features */}
+        <div className="flex flex-col gap-6">
+          <p className="font-bold text-2xl md:text-3xl tracking-wider uppercase">
+            Features
+          </p>
+          <p className="font-thin tracking-wider leading-relaxed whitespace-pre-line">
+            {filteredProduct?.features}
+          </p>
+        </div>
 
-      {/* In the Box */}
-      <div className="flex flex-col md:flex-row gap-6 md:gap-20">
-        <p className="uppercase text-2xl md:text-3xl font-semibold tracking-wide md:w-[500px]">
-          in the box
-        </p>
-        <div className="flex flex-col gap-3 md:w-full">
-          {filteredProduct?.includes.map((incl, idx) => (
-            <p key={idx} className="font-thin tracking-wider">
-              <span className="text-primary-1 mr-6 font-semibold">
-                {incl.quantity}x
-              </span>
-              {incl.item}
-            </p>
-          ))}
+        {/* In the Box */}
+        <div className="flex flex-col md:flex-row lg:flex-col gap-6 md:gap-20 lg:gap-10">
+          <p className="uppercase text-2xl md:text-3xl font-semibold tracking-wide md:w-[500px]">
+            in the box
+          </p>
+          <div className="flex flex-col gap-3 md:w-full">
+            {filteredProduct?.includes.map((incl, idx) => (
+              <p key={idx} className="font-thin tracking-wider">
+                <span className="text-primary-1 mr-6 font-semibold">
+                  {incl.quantity}x
+                </span>
+                {incl.item}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* images */}
-      <div className="flex flex-col md:flex-row gap-4">
-        <div className="flex flex-col gap-4 h-[400px] w-full rounded-lg overflow-clip">
+      <div className="flex flex-col md:flex-row gap-4 lg:gap-8">
+        <div className="flex flex-col gap-4 lg:gap-8 h-[400px] lg:h-[650px] w-full lg:w-[650px] rounded-lg overflow-clip">
           <img
             src={filteredProduct?.gallery.first.desktop}
             className="h-[50%] w-full object-cover block rounded-lg"
@@ -115,7 +123,7 @@ const ProductPreview = () => {
             className="h-[50%] w-full object-cover block rounded-lg"
           />
         </div>
-        <div className="h-[400px] w-full rounded-lg overflow-clip">
+        <div className="h-[400px] lg:h-[650px] w-full rounded-lg overflow-clip">
           <img
             src={filteredProduct?.gallery.third.desktop}
             className="h-full w-full object-cover block"
@@ -124,15 +132,15 @@ const ProductPreview = () => {
       </div>
 
       {/* suggestions */}
-      <div className="flex flex-col gap-8 w-full justify-center items-center">
+      <div className="flex flex-col gap-8 lg:gap-16 w-full justify-center items-center">
         <p className="uppercase w-full text-2xl font-semibold tracking-wider text-center">
           You may also like
         </p>
-        <div className="flex flex-col md:flex-row w-full gap-3">
+        <div className="flex flex-col md:flex-row w-full gap-3 lg:gap-8">
           {filteredProduct?.others.map((sugg, idx) => (
             <div
               key={idx}
-              className="flex flex-col w-full gap-8 justify-center items-center"
+              className="flex flex-col w-full gap-8 lg:gap-12 justify-center items-center"
             >
               <div className="h-[150px] md:h-[350px] w-full bg-gray1 rounded-lg overflow-clip">
                 <img
