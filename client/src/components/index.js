@@ -10,3 +10,4 @@ export { default as HomeFooter } from "./HomeFooter";
 export { default as HomeNavigationLink } from "./HomeNavigationLink";
 export { default as ProductCard } from "./ProductCard";
 export { default as ProductPreview } from "./ProductPreview";
+export { default as Cart } from "./Cart";

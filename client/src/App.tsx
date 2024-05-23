@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import {
@@ -8,14 +9,17 @@ import {
   Product,
   NotFound,
 } from "./pages";
-import { Navbar, HomeFooter } from "./components";
+import { Navbar, HomeFooter, Cart } from "./components";
 
 const App = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="h-dvh w-dvw font-Manrope overflow-x-hidden">
       <div className="flex h-[100px] w-full lg:justify-center lg:items-center bg-black2">
-        <Navbar />
+        <Navbar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
+      {isOpen && <Cart />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/headphones" element={<Headphones />} />
