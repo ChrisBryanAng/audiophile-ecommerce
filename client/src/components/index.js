@@ -11,3 +11,6 @@ export { default as HomeNavigationLink } from "./HomeNavigationLink";
 export { default as ProductCard } from "./ProductCard";
 export { default as ProductPreview } from "./ProductPreview";
 export { default as Cart } from "./Cart";
+export { default as GoBackButton } from "./GoBackButton";
+export { default as FormInput } from "./FormInput";
+export { default as FormRadio } from "./FormRadio";

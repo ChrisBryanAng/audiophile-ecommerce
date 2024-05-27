@@ -8,6 +8,7 @@ export default {
         "primary-2": "#FBAF85",
         gray1: "#F1F1F1",
         gray2: "#FAFAFA",
+        gray3: "#CFCFCF",
         "hover-button": "#4C4C4C",
         black1: "#000000",
         black2: "#101010",

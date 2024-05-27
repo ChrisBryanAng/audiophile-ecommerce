@@ -7,6 +7,7 @@ import {
   Speakers,
   Earphones,
   Product,
+  Checkout,
   NotFound,
 } from "./pages";
 import { Navbar, HomeFooter, Cart } from "./components";
@@ -26,6 +27,7 @@ const App = () => {
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/earphones" element={<Earphones />} />
         <Route path="/:category/:id" element={<Product />} />
+        <Route path="/checkout" element={<Checkout />} />
 
         <Route path="*" element={<NotFound />} />
       </Routes>

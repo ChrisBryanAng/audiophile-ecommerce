@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import data from "../utils/data.json";
 
+import { GoBackButton } from "./";
+
 const ProductPreview = () => {
-  const navigate = useNavigate();
   const { id } = useParams();
   const [filteredProduct, setFilteredProduct] = useState<IProduct>();
 
@@ -12,18 +13,9 @@ const ProductPreview = () => {
     setFilteredProduct(product);
   }, [id]);
 
-  const handlePreviousPage = () => {
-    navigate(-1);
-  };
-
   return (
     <div className="flex flex-col h-full w-full lg:w-[80%] gap-24 lg:gap-32">
-      <button
-        onClick={handlePreviousPage}
-        className="capitalize hover:underline text-start -mb-16 lg:-mb-14 lg:mt-10 text-black1/80 hover:text-primary-1"
-      >
-        Go back
-      </button>
+      <GoBackButton />
 
       <div className="flex flex-col md:flex-row gap-8 md:gap-20 lg:gap-32">
         <div className="h-[350px] md:h-[480px] lg:h-[600px] w-full md:w-[500px] lg:w-[1400px] bg-gray1 rounded-lg overflow-clip">
